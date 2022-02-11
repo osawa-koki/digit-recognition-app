@@ -13,7 +13,9 @@ def load_keras_model(path):
 def transform(image):
     image = image[:, :, 0].astype('uint8') # 0番目のチャンネルだけ取り出して，白黒画像にする
     image = cv2.resize(image, dsize=(28, 28))
-    return np.array(image, dtype='uint8').reshape(1, 28, 28, 1)
+    image = image.astype('float32')
+    image /= 255
+    return image.reshape(1, 28, 28, 1)
 
 def predict(model, data):
     if np.all(data == data[0, 0, 0, 0]): # 初期画像ならすべての要素が0の配列を返す
