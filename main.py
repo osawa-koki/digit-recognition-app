@@ -5,7 +5,6 @@ from keras.models import load_model
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 
-
 @st.cache(allow_output_mutation=True)
 def load_keras_model(path):
     return load_model(path, compile=False)
@@ -19,7 +18,7 @@ def transform(image):
 
 def predict(model, data):
     if np.all(data == data[0, 0, 0, 0]): # 初期画像ならすべての要素が0の配列を返す
-        return np.zeros(10)    
+        return np.zeros(10)
     p = model.predict(data)[0]
     return p
 
