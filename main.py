@@ -50,4 +50,4 @@ with col2:
         )
         st.bar_chart(chart_data, use_container_width=True)
 
-st.write("Code: https://github.com/s-usukura/digit-recognition-app")
+st.write("Code: https://github.com/osawa-koki/digit-recognition-app")
