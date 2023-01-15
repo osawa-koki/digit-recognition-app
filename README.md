@@ -1,2 +1,10 @@
 # digit-recognition-app
-URL: https://share.streamlit.io/s-usukura/digit-recognition-app/main/main.py
+
+一般的な手法でモデルを構築した数字認識プログラム。  
+
+- 畳み込みフィルター(relu)
+- プーリング層
+- 畳み込みフィルター(relu)
+- プーリング層
+- 次元の変換
+- ソフトマックス関数
