@@ -22,7 +22,7 @@ def predict(model, data):
     p = model.predict(data)[0]
     return p
 
-model = load_keras_model("./models/model4.h5")
+model = load_keras_model("./model.h5")
 
 st.title("digit-recognition-app")
 
